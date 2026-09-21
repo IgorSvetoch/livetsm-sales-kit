@@ -1,4 +1,178 @@
-<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>LiveTSM — комплект продавца</title><style>body{font:18px/1.65 system-ui,sans-serif;color:#16304b;max-width:1100px;margin:48px auto;padding:0 28px;background:#f9fbfd}h1{font-size:38px;line-height:1.15}h2{margin-top:54px;color:#006c73}h3{margin-top:32px}table{border-collapse:collapse;width:100%;font-size:16px;background:white}th,td{padding:12px;border:1px solid #d5e1e8;text-align:left;vertical-align:top}th{background:#e9f4f4}a{color:#007680}img{max-width:100%;height:auto}nav{padding:18px;background:#eaf4f4;border-radius:10px}@media print{body{font-size:11pt;margin:0}h2,h3{break-after:avoid}tr{break-inside:avoid}}</style><style>
-.revision{display:inline-block;background:#d8efe7;color:#125347;padding:7px 13px;border-radius:7px;font-weight:700}
-.connections{margin-top:22px}.connection{display:grid;grid-template-columns:34% 1fr;background:white;border:1px solid #bcd9e4;border-radius:14px;overflow:hidden;margin:16px 0;break-inside:avoid}.visual{background:#f2f7fa;padding:20px;display:flex;flex-direction:column;justify-content:center;align-items:center}.visual img{width:100%;max-height:260px;object-fit:contain}.visual figcaption{font-size:13px;line-height:1.45;color:#486477;text-align:center;margin-top:12px}.connection .copy{padding:25px 28px}.connection h3{margin:10px 0;font-size:27px;line-height:1.2}.connection p{margin:10px 0;font-size:17px;line-height:1.55}.tag{display:inline-block;background:#007f80;color:white;font-size:13px;letter-spacing:.3px;padding:5px 12px;border-radius:6px;font-weight:bold}.planned{border-color:#e3cea7}.planned .tag{background:#a96712}.caution{color:#785222;font-size:14px!important}.terms{font-size:14px;line-height:1.55;color:#536a7a}.connection figure{margin:0}@media(max-width:650px){.connection{grid-template-columns:1fr}.visual img{max-width:310px}.connection .copy{padding:20px}body{padding:0 15px}}
-</style><body><h1>LiveTSM: комплект продавца</h1><p class="revision">Редакция r04 · 16.09.2026 · Полные PNG-листы · изображения из ТУ</p><nav><a href="LiveTSM_Sales_Cards.html">Карточки: вопросы клиента и готовые ответы</a> · <a href="LiveTSM_Competitive_Analysis.html">Конкурентный разбор</a> · <a href="README.md">О комплекте</a></nav><section><h2>Скачать полные PNG-листы</h2><p>Все пять листов доступны отдельными файлами в репозитории.</p><ul><li><a download href="LiveTSM_Sales_01_Current.png?rev=20260916-2">LiveTSM_Sales_01_Current.png</a></li><li><a download href="LiveTSM_Sales_02_Roadmap.png?rev=20260916-2">LiveTSM_Sales_02_Roadmap.png</a></li><li><a download href="LiveTSM_Sales_03_Interfaces.png?rev=20260916-2">LiveTSM_Sales_03_Interfaces.png</a></li><li><a download href="LiveTSM_Sales_04_Competition.png?rev=20260916-2">LiveTSM_Sales_04_Competition.png</a></li><li><a download href="LiveTSM_Sales_05_Platforms.png?rev=20260916-2">LiveTSM_Sales_05_Platforms.png</a></li></ul></section><h2>1. Что предлагаем сейчас</h2><img src="LiveTSM_Sales_01_Current.png?rev=20260916-2" alt="Шесть вопросов клиента: текущие преимущества"><h2>2. Куда развивается продукт</h2><p>Шлюз REST API и интеграция с JMS обозначены как планы.</p><img src="LiveTSM_Sales_02_Roadmap.png?rev=20260916-2" alt="План развития и три варианта управления"><h2>3. Подключение под вашу платформу</h2><img src="LiveTSM_Sales_03_Interfaces.png?rev=20260916-2" alt="Полный лист: USB, M.2, план PCI Express и переходник"><h2>4. Ответы о конкурентах</h2><img src="LiveTSM_Sales_04_Competition.png?rev=20260916-2" alt="Конкуренты: управление и защита ОС"><p><a href="LiveTSM_Competitive_Analysis.html">Подробный конкурентный разбор</a></p><h2>5. Аппаратные платформы: три сценария</h2><img src="LiveTSM_Sales_05_Platforms.png?rev=20260916-2" alt="Ноутбук, шлюз и производитель оборудования"><h2>Ролики без звука</h2><p>Слайдовые демо по 48 секунд с изображениями из ТУ. Будущие функции отмечены как план. Видео открываются прямо на странице.</p><h3>Ноутбук</h3><video controls preload="metadata" width="100%" src="LiveTSM_Laptop_Clean.mp4"></video><h3>Шлюз</h3><video controls preload="metadata" width="100%" src="LiveTSM_NGFW_Clean.mp4"></video><p>Источники, терминология и условия применения — в <a href="LiveTSM_Sales_Cards.html">карточках продавца</a>.</p><p class="terms">Источники изображений: LiveTSM ТУ(9).docx, раздел характеристик, строки «Внешний вид». Изображения изделия не перерисованы. Переходник показан схематично.</p></body></html>
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="LiveTSM — материалы для выбора исполнения, интеграции в аппаратную платформу и проверки разъёмов M.2 A/E.">
+  <title>LiveTSM — комплект для продаж и аппаратной интеграции</title>
+  <style>
+    :root{--navy:#0b2a5a;--teal:#008f86;--blue:#256ca8;--orange:#e89b12;--ink:#18324b;--muted:#60758a;--line:#c9dce7;--pale:#f2f7fa;--white:#fff}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:#f7fafc;color:var(--ink);font:17px/1.6 system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+    a{color:#066f78}
+    .wrap{width:min(1180px,calc(100% - 36px));margin:auto}
+    header{background:linear-gradient(135deg,#082654 0%,#0b3f72 72%,#087f7b 100%);color:#fff;padding:54px 0 42px}
+    header h1{font-size:clamp(34px,5vw,58px);line-height:1.04;margin:0 0 18px;max-width:1000px}
+    header p{font-size:clamp(18px,2.2vw,24px);max-width:900px;margin:0 0 26px;color:#e5f2f7}
+    .revision{font-size:14px;color:#c3dbe8;margin-top:20px}
+    .actions{display:flex;flex-wrap:wrap;gap:12px}
+    .button{display:inline-block;padding:12px 18px;border-radius:9px;background:#fff;color:var(--navy);text-decoration:none;font-weight:750}
+    .button.alt{background:#0aa297;color:#fff;border:1px solid #59cfc7}
+    nav{position:sticky;top:0;z-index:3;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
+    nav .wrap{display:flex;gap:22px;overflow:auto;padding:12px 0;white-space:nowrap}
+    nav a{text-decoration:none;font-weight:650;color:#315169}
+    main{padding:14px 0 64px}
+    section{padding:42px 0}
+    h2{font-size:clamp(27px,3.4vw,40px);line-height:1.15;color:var(--navy);margin:0 0 12px}
+    h3{font-size:22px;line-height:1.25;color:var(--navy);margin:0 0 8px}
+    .lead{font-size:20px;color:#4f687d;max-width:900px;margin:0 0 24px}
+    .visual{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px;box-shadow:0 14px 38px rgba(26,66,96,.08)}
+    .visual img{display:block;width:100%;height:auto;border-radius:10px}
+    .caption{font-size:14px;color:var(--muted);margin:10px 4px 0}
+    .grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+    .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px}
+    .card p{margin:7px 0 0}
+    .eyebrow{color:var(--teal);font-size:14px;font-weight:800;letter-spacing:.05em;text-transform:uppercase}
+    .engineering{background:#eaf3fa;border-top:1px solid #c5dbea;border-bottom:1px solid #c5dbea}
+    .engineering .button{background:var(--navy);color:#fff}
+    .downloads{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:20px}
+    .download{display:flex;justify-content:space-between;gap:18px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:10px;padding:15px 17px;text-decoration:none;color:var(--ink)}
+    .download strong{color:var(--navy)}
+    .download span{color:var(--muted);font-size:14px;text-align:right}
+    video{display:block;width:100%;background:#102a44;border-radius:12px}
+    footer{background:#0b2a5a;color:#d8e7ef;padding:30px 0;font-size:14px}
+    footer a{color:#fff}
+    @media(max-width:800px){.grid2,.grid3,.downloads{grid-template-columns:1fr}.wrap{width:min(100% - 24px,1180px)}header{padding-top:38px}.visual{padding:7px}section{padding:32px 0}}
+    @media print{nav,.actions,video{display:none}body{background:#fff}.visual,.card{box-shadow:none;break-inside:avoid}section{padding:20px 0}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="eyebrow" style="color:#73ded6">Aladdin LiveTSM</div>
+      <h1>Комплект для продаж и аппаратной интеграции</h1>
+      <p>От задачи заказчика — к выбору исполнения, проверке электрического интерфейса и согласованию платформы с производителем оборудования.</p>
+      <div class="actions">
+        <a class="button" href="LiveTSM_Sales_Cards.html">Ответы на вопросы заказчика</a>
+        <a class="button alt" href="LiveTSM_M2_OEM_Integration_Guide.docx" download>Инструкция для производителя DOCX</a>
+        <a class="button" href="LiveTSM_Public_Sales_Kit_2026-09-21_r05.zip" download>Скачать публичный комплект ZIP</a>
+      </div>
+      <div class="revision">Редакция r05 · 21.09.2026 · корпоративная инструкция для OEM · изображения изделия из ТУ · схема переходника условная</div>
+    </div>
+  </header>
+
+  <nav aria-label="Разделы страницы">
+    <div class="wrap">
+      <a href="#product">Продукт</a>
+      <a href="#interface">Выбор интерфейса</a>
+      <a href="#engineering">Контакты M.2</a>
+      <a href="#usecases">Сценарии</a>
+      <a href="#materials">Материалы</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="product">
+      <div class="wrap">
+        <h2>Что предлагаем и куда развивается LiveTSM</h2>
+        <p class="lead">Два первых листа дают продавцу короткий контекст: что доступно сейчас и какие функции входят в план развития.</p>
+        <div class="grid2">
+          <figure class="visual">
+            <img src="LiveTSM_Sales_01_Current.png" alt="Текущее предложение LiveTSM">
+            <figcaption class="caption">Текущее предложение и ключевая ценность</figcaption>
+          </figure>
+          <figure class="visual">
+            <img src="LiveTSM_Sales_02_Roadmap.png" alt="План развития LiveTSM">
+            <figcaption class="caption">План развития продукта</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="interface">
+      <div class="wrap">
+        <div class="eyebrow">Уровень 1 · выбор решения</div>
+        <h2>Как подключить LiveTSM к аппаратной платформе</h2>
+        <p class="lead">Сначала выясняем, что реально разведено в разъёме: USB 2.0, PCI Express или только M.2 Key M / NVMe. После этого выбираем текущее исполнение, направление развития или переходник под конкретную платформу.</p>
+        <figure class="visual">
+          <img src="LiveTSM_Sales_03_Interfaces.png" alt="Три пути подключения LiveTSM к аппаратной платформе">
+          <figcaption class="caption">Сейловый лист: что предложить заказчику после проверки интерфейса</figcaption>
+        </figure>
+        <div class="grid3" style="margin-top:20px">
+          <div class="card"><h3>M.2 A/E и USB 2.0</h3><p>Текущее M.2 2230 A+E исполнение. Нужны USB_D+ и USB_D- на контактах 3 и 5.</p></div>
+          <div class="card"><h3>M.2 A/E только с PCIe</h3><p>Требуется PCIe-исполнение с мостом PCIe-to-USB Host на модуле. Статус — направление развития.</p></div>
+          <div class="card"><h3>Только Key M / NVMe</h3><p>Подберём активный переходник и проверим питание, механику и раннюю инициализацию UEFI.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="engineering" class="engineering">
+      <div class="wrap">
+        <div class="eyebrow">Уровень 2 · инженерная проверка</div>
+        <h2>Какие контакты должны быть разведены</h2>
+        <p class="lead">Карта предназначена для схемотехника, разработчика UEFI и внедренца. Она показывает физическое положение USB, PCIe Lane 0, питания и ключей A/E — именно так можно проверить разъём по схеме и трассировке платы.</p>
+        <figure class="visual">
+          <img src="LiveTSM_Sales_06_M2_Connector_Map.png" alt="Карта контактов M.2 A и E для USB 2.0 и PCIe Lane 0">
+          <figcaption class="caption">Инженерная карта контактов M.2 A/E. Полная распиновка и требования включены в DOCX.</figcaption>
+        </figure>
+        <div class="actions" style="margin-top:20px">
+          <a class="button" href="LiveTSM_M2_OEM_Integration_Guide.docx" download>Скачать инструкцию для производителя</a>
+          <a class="button" href="LiveTSM_Sales_06_M2_Connector_Map.png" download>Скачать карту контактов PNG</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="usecases">
+      <div class="wrap">
+        <h2>Где применяется решение</h2>
+        <p class="lead">После выбора интерфейса возвращаемся к задаче заказчика: ноутбук без вскрытия корпуса, шлюз или сервер с внутренним модулем, интеграция в серийную платформу OEM.</p>
+        <figure class="visual">
+          <img src="LiveTSM_Sales_05_Platforms.png" alt="Сценарии применения LiveTSM для ноутбука, шлюза, сервера и производителя оборудования">
+        </figure>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2>Позиционирование и демонстрации</h2>
+        <div class="grid2">
+          <figure class="visual">
+            <img src="LiveTSM_Sales_04_Competition.png" alt="Конкурентное позиционирование LiveTSM">
+            <figcaption class="caption">Краткий конкурентный лист</figcaption>
+          </figure>
+          <div class="card">
+            <h3>Короткие видеосценарии</h3>
+            <p>Демонстрации без звука показывают сценарии для ноутбука и многофункционального сетевого шлюза.</p>
+            <video controls preload="metadata" src="LiveTSM_Laptop_Clean.mp4"></video>
+            <p style="margin-top:14px"><video controls preload="metadata" src="LiveTSM_NGFW_Clean.mp4"></video></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="materials">
+      <div class="wrap">
+        <h2>Материалы для скачивания</h2>
+        <p class="lead">Можно скачать весь безопасный публичный комплект одним ZIP или переслать заказчику и партнёру отдельные материалы.</p>
+        <div class="downloads">
+          <a class="download" href="LiveTSM_Public_Sales_Kit_2026-09-21_r05.zip" download><strong>Публичный комплект целиком</strong><span>ZIP</span></a>
+          <a class="download" href="LiveTSM_Sales_01_Current.png" download><strong>Текущее предложение</strong><span>PNG</span></a>
+          <a class="download" href="LiveTSM_Sales_02_Roadmap.png" download><strong>План развития</strong><span>PNG</span></a>
+          <a class="download" href="LiveTSM_Sales_03_Interfaces.png" download><strong>Выбор подключения</strong><span>PNG</span></a>
+          <a class="download" href="LiveTSM_Sales_04_Competition.png" download><strong>Конкурентный лист</strong><span>PNG</span></a>
+          <a class="download" href="LiveTSM_Sales_05_Platforms.png" download><strong>Сценарии платформ</strong><span>PNG</span></a>
+          <a class="download" href="LiveTSM_Sales_06_M2_Connector_Map.png" download><strong>Карта контактов M.2</strong><span>PNG</span></a>
+          <a class="download" href="LiveTSM_M2_OEM_Integration_Guide.docx" download><strong>Инструкция для OEM в корпоративном шаблоне</strong><span>DOCX</span></a>
+          <a class="download" href="LiveTSM_Sales_Cards.html"><strong>Карточки продавца</strong><span>HTML</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">LiveTSM · материалы для продаж и аппаратной интеграции · 21.09.2026</div>
+  </footer>
+</body>
+</html>
