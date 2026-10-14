@@ -46,6 +46,16 @@
     footer a{color:#fff}
     @media(max-width:800px){.grid2,.grid3,.downloads{grid-template-columns:1fr}.wrap{width:min(100% - 24px,1180px)}header{padding-top:38px}.visual{padding:7px}section{padding:32px 0}}
     @media print{nav,.actions,video{display:none}body{background:#fff}.visual,.card{box-shadow:none;break-inside:avoid}section{padding:20px 0}}
+
+    .os-brief{margin:0 0 24px;border-left:4px solid var(--teal)}
+    .os-brief h3{font-size:22px;margin:0 0 7px}
+    .os-brief p{margin:0 0 9px;max-width:900px}
+    .os-brief a{font-weight:650}
+    .faq-item{background:#fff;border:1px solid var(--line);border-radius:12px;margin:12px 0;overflow:hidden}
+    .faq-item summary{cursor:pointer;font-size:19px;font-weight:700;padding:19px 22px;color:var(--navy)}
+    .faq-item summary:focus-visible{outline:3px solid var(--teal);outline-offset:-4px}
+    .faq-answer{padding:0 22px 22px}.faq-answer p{max-width:1000px}
+    @media(max-width:800px){.os-brief{padding:16px}.faq-item summary{font-size:17px;padding:16px}.faq-answer{padding:0 16px 18px}}
   </style>
 </head>
 <body>
@@ -57,15 +67,16 @@
       <div class="actions">
         <a class="button" href="LiveTSM_Sales_Cards.html">Ответы на вопросы заказчика</a>
         <a class="button alt" href="LiveTSM_M2_OEM_Integration_Guide.docx" download>Инструкция для производителя DOCX</a>
-        <a class="button" href="LiveTSM_Public_Sales_Kit_2026-09-22_r06.zip" download>Скачать публичный комплект ZIP</a>
+        <a class="button" href="LiveTSM_Public_Sales_Kit_2026-10-13_r10.zip" download>Скачать публичный комплект ZIP</a>
       </div>
-      <div class="revision">Редакция r06 · 22.09.2026 · РРЦ 12 000 ₽ · цена со скидкой 7 000 ₽ · корпоративная инструкция для OEM</div>
+      <div class="revision">Редакция r10 · 13.10.2026 · РРЦ 12 000 ₽ · корпоративная инструкция для OEM</div>
     </div>
   </header>
 
   <nav aria-label="Разделы страницы">
     <div class="wrap">
       <a href="#product">Продукт</a>
+      <a href="#faq">Вопросы и ответы</a>
       <a href="#interface">Выбор интерфейса</a>
       <a href="#engineering">Контакты M.2</a>
       <a href="#usecases">Сценарии</a>
@@ -81,7 +92,7 @@
         <div class="grid2">
           <figure class="visual">
             <img src="LiveTSM_Sales_01_Current.png" alt="Текущее предложение LiveTSM">
-            <figcaption class="caption">Текущее предложение и ключевая ценность</figcaption>
+            <figcaption class="caption">Текущее предложение и ключевая ценность · <a href="#faq-os-choice">Подробнее о выборе Linux или Windows</a></figcaption>
           </figure>
           <figure class="visual">
             <img src="LiveTSM_Sales_02_Roadmap.png" alt="План развития LiveTSM">
@@ -90,7 +101,6 @@
         </div>
       </div>
     </section>
-
     <section id="interface">
       <div class="wrap">
         <div class="eyebrow">Уровень 1 · выбор решения</div>
@@ -152,12 +162,19 @@
       </div>
     </section>
 
+    <section id="faq"><div class="wrap"><h2>Вопросы и ответы</h2>
+<details class="faq-item" id="faq-os-choice"><summary>Можно ли выбирать Linux или Windows без вызова администратора?</summary><div class="faq-answer"><p>Да. Администратор один раз задаёт разрешённую конфигурацию: LiveTSM выполняет проверки и передаёт управление GRUB. Пользователь выбирает нужную ОС в меню. Для каждого переключения перенастройка LiveTSM не нужна.</p><p>Обновления и изменение разрешённой конфигурации обслуживаются по регламенту. Выбирается одна ОС при запуске; это не одновременная работа нескольких систем.</p></div></details>
+<details class="faq-item" id="faq-boot-modes"><summary>Чем отличаются прямая загрузка Linux и режим совместимости?</summary><div class="faq-answer"><p><strong>Прямая загрузка Linux:</strong> LiveTSM сам запускает ядро Linux, исключая shim и GRUB из цепочки.</p><p><strong>Режим совместимости:</strong> LiveTSM запускает разрешённый GRUB, а пользователь выбирает ОС. Для Windows сохраняется Windows Boot Manager.</p><p class="caption">GRUB — GRand Unified Bootloader, загрузчик с меню выбора ОС. shim — промежуточный EFI-загрузчик; EFI — Extensible Firmware Interface, интерфейс прошивки. ОС — операционная система.</p><figure class="visual"><img src="LiveTSM_Sales_07_Boot_Modes.png" alt="Подробное сравнение двух режимов загрузки LiveTSM" loading="lazy"><figcaption class="caption">Подробности для администратора безопасности</figcaption></figure><p><a href="LiveTSM_Sales_07_Boot_Modes.png" download>Скачать схему PNG</a> · <a href="LiveTSM_Partner_Battlecard_r08.docx" download>Карточка партнёра Word</a></p></div></details>
+<details class="faq-item" id="faq-security"><summary>Какой режим выбрать администратору безопасности?</summary><div class="faq-answer"><p>Прямая загрузка Linux сокращает число доверенных компонентов. Режим совместимости сохраняет привычный выбор ОС, но делает цепочку длиннее и расширяет поверхность атаки. Администратор осознанно принимает снижение безопасности относительно сокращённого варианта ради гибкости рабочего места.</p><p>В обоих случаях единственный разрешённый старт через LiveTSM должен сохраняться. Состав контролируемых компонентов определяется выбранной политикой и версией продукта.</p></div></details>
+<p class="caption">Источники: уточнения руководителя продукта от 13.10.2026; <a href="LiveTSM_Boot_Modes_Source.md">описание сценария и технические ссылки</a>.</p></div></section>
     <section id="materials">
       <div class="wrap">
         <h2>Материалы для скачивания</h2>
         <p class="lead">Можно скачать весь безопасный публичный комплект одним ZIP или переслать заказчику и партнёру отдельные материалы.</p>
         <div class="downloads">
-          <a class="download" href="LiveTSM_Public_Sales_Kit_2026-09-22_r06.zip" download><strong>Публичный комплект целиком</strong><span>ZIP</span></a>
+          <a class="download" href="LiveTSM_Public_Sales_Kit_2026-10-13_r10.zip" download><strong>Публичный комплект целиком</strong><span>ZIP</span></a>
+          <a class="download" href="LiveTSM_Sales_07_Boot_Modes.png" download><strong>Два режима и выбор ОС</strong><span>PNG</span></a>
+          <a class="download" href="LiveTSM_Partner_Battlecard_r08.docx" download><strong>Карточка партнёра</strong><span>DOCX</span></a>
           <a class="download" href="LiveTSM_Sales_01_Current.png" download><strong>Текущее предложение</strong><span>PNG</span></a>
           <a class="download" href="LiveTSM_Sales_02_Roadmap.png" download><strong>План развития</strong><span>PNG</span></a>
           <a class="download" href="LiveTSM_Sales_03_Interfaces.png" download><strong>Выбор подключения</strong><span>PNG</span></a>
@@ -172,7 +189,7 @@
   </main>
 
   <footer>
-    <div class="wrap">LiveTSM · материалы для продаж и аппаратной интеграции · 22.09.2026</div>
+    <div class="wrap">LiveTSM · материалы для продаж и аппаратной интеграции · 13.10.2026</div>
   </footer>
 </body>
 </html>
