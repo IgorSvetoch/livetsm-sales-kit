@@ -20,8 +20,8 @@
     .button{display:inline-block;padding:12px 18px;border-radius:9px;background:#fff;color:var(--navy);text-decoration:none;font-weight:750}
     .button.alt{background:#0aa297;color:#fff;border:1px solid #59cfc7}
     nav{position:sticky;top:0;z-index:3;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
-    nav .wrap{display:flex;gap:22px;overflow:auto;padding:12px 0;white-space:nowrap}
-    nav a{text-decoration:none;font-weight:650;color:#315169}
+    nav .wrap{display:flex;gap:16px;overflow:auto;padding:12px 0;white-space:nowrap}
+    nav a{text-decoration:none;font-size:16px;font-weight:650;color:#315169}
     main{padding:14px 0 64px}
     section{padding:42px 0}
     h2{font-size:clamp(27px,3.4vw,40px);line-height:1.15;color:var(--navy);margin:0 0 12px}
@@ -34,6 +34,19 @@
     .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
     .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px}
     .card p{margin:7px 0 0}
+    #regulatory{scroll-margin-top:64px;background:var(--pale);border-block:1px solid var(--line)}
+    .regulatory-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+    .regulatory-grid .card{display:flex;flex-direction:column;border-top:3px solid var(--teal);padding:18px}
+    .regulatory-grid .card h3{margin-bottom:6px}
+    .regulatory-grid .regulatory-level{color:var(--navy);font-weight:750;line-height:1.35}
+    .regulatory-grid .regulatory-name{color:#4f687d;font-size:15px;line-height:1.45;margin-bottom:12px}
+    .regulatory-grid .regulatory-ref{margin-top:auto;font-size:14px}
+    .regulatory-note{margin:18px 0 0;max-width:970px;color:#4f687d;font-size:15px}
+    #headless{scroll-margin-top:64px;margin:0 0 22px;border-left:4px solid var(--teal)}
+    #headless .eyebrow{margin-bottom:8px}
+    #headless ul{margin:12px 0;padding-left:23px}
+    @media(max-width:980px){.regulatory-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:520px){.regulatory-grid{grid-template-columns:1fr}}
     .eyebrow{color:var(--teal);font-size:14px;font-weight:800;letter-spacing:.05em;text-transform:uppercase}
     .engineering{background:#eaf3fa;border-top:1px solid #c5dbea;border-bottom:1px solid #c5dbea}
     .engineering .button{background:var(--navy);color:#fff}
@@ -67,19 +80,21 @@
       <div class="actions">
         <a class="button" href="LiveTSM_Sales_Cards.html">Ответы на вопросы заказчика</a>
         <a class="button alt" href="LiveTSM_M2_OEM_Integration_Guide.docx" download>Инструкция для производителя DOCX</a>
-        <a class="button" href="LiveTSM_Public_Sales_Kit_2026-10-13_r10.zip" download>Скачать публичный комплект ZIP</a>
+        <a class="button" href="LiveTSM_Public_Sales_Kit_2026-11-05_r11.zip" download>Скачать публичный комплект ZIP</a>
       </div>
-      <div class="revision">Редакция r10 · 13.10.2026 · РРЦ 12 000 ₽ · корпоративная инструкция для OEM</div>
+      <div class="revision">Редакция r11 · 05.11.2026 · РРЦ 12 000 ₽ · корпоративная инструкция для OEM</div>
     </div>
   </header>
 
   <nav aria-label="Разделы страницы">
     <div class="wrap">
       <a href="#product">Продукт</a>
+      <a href="#regulatory">Требования ФСТЭК</a>
       <a href="#faq">Вопросы и ответы</a>
       <a href="#interface">Выбор интерфейса</a>
       <a href="#engineering">Контакты M.2</a>
       <a href="#usecases">Сценарии</a>
+      <a href="#headless">Запуск без оператора</a>
       <a href="#materials">Материалы</a>
     </div>
   </nav>
@@ -99,6 +114,41 @@
             <figcaption class="caption">План развития продукта</figcaption>
           </figure>
         </div>
+      </div>
+    </section>
+    <section id="regulatory" aria-labelledby="regulatory-title">
+      <div class="wrap">
+        <div class="eyebrow">Область применения</div>
+        <h2 id="regulatory-title">Доверенная загрузка для систем с высокими требованиями к защите</h2>
+        <p class="lead">Aladdin LiveTSM — средство доверенной загрузки уровня платы расширения: <strong>4-й класс защиты, 4-й уровень доверия (УД4)</strong>. Профиль защиты — ИТ.СДЗ.ПР4.ПЗ.</p>
+        <div class="regulatory-grid">
+          <div class="card">
+            <h3>ГИС</h3>
+            <p class="regulatory-level">1-й класс защищённости</p>
+            <p class="regulatory-name">Государственные информационные системы</p>
+            <a class="regulatory-ref" href="https://www.kontur-extern.ru/info/normativ/document/1/508188-prikaz-fstek-rf-ot-11-04-2025-n-117">Приказ ФСТЭК № 117, п. 72</a>
+          </div>
+          <div class="card">
+            <h3>ИСПДн</h3>
+            <p class="regulatory-level">1-й уровень защищённости</p>
+            <p class="regulatory-name">Информационные системы персональных данных</p>
+            <a class="regulatory-ref" href="https://base.garant.ru/70380924/">Приказ ФСТЭК № 21, п. 12</a>
+          </div>
+          <div class="card">
+            <h3>АСУ ТП</h3>
+            <p class="regulatory-level">1-й класс защищённости</p>
+            <p class="regulatory-name">Автоматизированные системы управления технологическими процессами</p>
+            <a class="regulatory-ref" href="https://base.garant.ru/70690918/">Приказ ФСТЭК № 31, п. 24</a>
+          </div>
+          <div class="card">
+            <h3>Значимые объекты КИИ</h3>
+            <p class="regulatory-level">1-я категория значимости</p>
+            <p class="regulatory-name">Критическая информационная инфраструктура</p>
+            <a class="regulatory-ref" href="https://base.garant.ru/71901880/">Приказ ФСТЭК № 239, п. 29</a>
+          </div>
+        </div>
+        <p class="regulatory-note">LiveTSM обеспечивает доверенную загрузку в составе системы защиты информации. Соответствие системы в целом оценивается отдельно с учётом реализованных мер защиты.</p>
+        <p class="regulatory-note"><a href="LiveTSM_Sales_Cards.html#faq-regulatory">Что ответить заказчику о классе и уровне доверия</a></p>
       </div>
     </section>
     <section id="interface">
@@ -138,6 +188,19 @@
       <div class="wrap">
         <h2>Где применяется решение</h2>
         <p class="lead">После выбора интерфейса возвращаемся к задаче заказчика: ноутбук без вскрытия корпуса, шлюз или сервер с внутренним модулем, интеграция в серийную платформу OEM.</p>
+        <article class="card" id="headless" aria-labelledby="headless-title">
+          <div class="eyebrow">Headless · оборудование без локального оператора</div>
+          <h3 id="headless-title">Доверенная загрузка без пароля и токена пользователя</h3>
+          <p>Для межсетевых экранов нового поколения (NGFW), сетевых шлюзов и серверов. При штатном включении или перезапуске устройство может загрузиться без присутствия оператора.</p>
+          <ul>
+            <li>Уполномоченный администратор заранее настраивает разрешённую конфигурацию запуска.</li>
+            <li>LiveTSM проверяет целостность заданных компонентов и передаёт управление разрешённой ОС только после успешных проверок.</li>
+            <li>На штатном старте не требуется вводить пароль пользователя или держать подключённым его личный токен. Сам модуль LiveTSM остаётся установленным.</li>
+          </ul>
+          <p><strong>Почему возможен такой запуск.</strong> Профиль ИТ.СДЗ.ПР4.ПЗ, который детализирует требования приказа ФСТЭК России № 119 для средств доверенной загрузки уровня платы расширения 4-го класса защиты, не требует идентифицировать и аутентифицировать пользователя при каждом штатном запуске.</p>
+          <p class="caption">Доступ к настройкам защищён аутентификацией администратора. Применимость режима проверяют по документации конкретного исполнения и требованиям системы заказчика. <a href="https://legalacts.ru/doc/itsdzpr4pz-metodicheskii-dokument-profil-zashchity-sredstva-doverennoi/">Профиль защиты ИТ.СДЗ.ПР4.ПЗ</a>.</p>
+          <p><a href="LiveTSM_Sales_Cards.html#faq-headless">Ответы о запуске без оператора и сравнении с другими СДЗ</a></p>
+        </article>
         <figure class="visual">
           <img src="LiveTSM_Sales_05_Platforms.png" alt="Сценарии применения LiveTSM для ноутбука, шлюза, сервера и производителя оборудования">
         </figure>
@@ -164,7 +227,7 @@
 
     <section id="faq"><div class="wrap"><h2>Вопросы и ответы</h2>
 <details class="faq-item" id="faq-os-choice"><summary>Можно ли выбирать Linux или Windows без вызова администратора?</summary><div class="faq-answer"><p>Да. Администратор один раз задаёт разрешённую конфигурацию: LiveTSM выполняет проверки и передаёт управление GRUB. Пользователь выбирает нужную ОС в меню. Для каждого переключения перенастройка LiveTSM не нужна.</p><p>Обновления и изменение разрешённой конфигурации обслуживаются по регламенту. Выбирается одна ОС при запуске; это не одновременная работа нескольких систем.</p></div></details>
-<details class="faq-item" id="faq-boot-modes"><summary>Чем отличаются прямая загрузка Linux и режим совместимости?</summary><div class="faq-answer"><p><strong>Прямая загрузка Linux:</strong> LiveTSM сам запускает ядро Linux, исключая shim и GRUB из цепочки.</p><p><strong>Режим совместимости:</strong> LiveTSM запускает разрешённый GRUB, а пользователь выбирает ОС. Для Windows сохраняется Windows Boot Manager.</p><p class="caption">GRUB — GRand Unified Bootloader, загрузчик с меню выбора ОС. shim — промежуточный EFI-загрузчик; EFI — Extensible Firmware Interface, интерфейс прошивки. ОС — операционная система.</p><figure class="visual"><img src="LiveTSM_Sales_07_Boot_Modes.png" alt="Подробное сравнение двух режимов загрузки LiveTSM" loading="lazy"><figcaption class="caption">Подробности для администратора безопасности</figcaption></figure><p><a href="LiveTSM_Sales_07_Boot_Modes.png" download>Скачать схему PNG</a> · <a href="LiveTSM_Partner_Battlecard_r08.docx" download>Карточка партнёра Word</a></p></div></details>
+<details class="faq-item" id="faq-boot-modes"><summary>Чем отличаются прямая загрузка Linux и режим совместимости?</summary><div class="faq-answer"><p><strong>Прямая загрузка Linux:</strong> LiveTSM сам запускает ядро Linux, исключая shim и GRUB из цепочки.</p><p><strong>Режим совместимости:</strong> LiveTSM запускает разрешённый GRUB, а пользователь выбирает ОС. Для Windows сохраняется Windows Boot Manager.</p><p class="caption">GRUB — GRand Unified Bootloader, загрузчик с меню выбора ОС. shim — промежуточный EFI-загрузчик; EFI — Extensible Firmware Interface, интерфейс прошивки. ОС — операционная система.</p><figure class="visual"><img src="LiveTSM_Sales_07_Boot_Modes.png" alt="Подробное сравнение двух режимов загрузки LiveTSM" loading="lazy"><figcaption class="caption">Подробности для администратора безопасности</figcaption></figure><p><a href="LiveTSM_Sales_07_Boot_Modes.png" download>Скачать схему PNG</a> · <a href="LiveTSM_Partner_Battlecard_r09.docx" download>Карточка партнёра Word</a></p></div></details>
 <details class="faq-item" id="faq-security"><summary>Какой режим выбрать администратору безопасности?</summary><div class="faq-answer"><p>Прямая загрузка Linux сокращает число доверенных компонентов. Режим совместимости сохраняет привычный выбор ОС, но делает цепочку длиннее и расширяет поверхность атаки. Администратор осознанно принимает снижение безопасности относительно сокращённого варианта ради гибкости рабочего места.</p><p>В обоих случаях единственный разрешённый старт через LiveTSM должен сохраняться. Состав контролируемых компонентов определяется выбранной политикой и версией продукта.</p></div></details>
 <p class="caption">Источники: уточнения руководителя продукта от 13.10.2026; <a href="LiveTSM_Boot_Modes_Source.md">описание сценария и технические ссылки</a>.</p></div></section>
     <section id="materials">
@@ -172,9 +235,9 @@
         <h2>Материалы для скачивания</h2>
         <p class="lead">Можно скачать весь безопасный публичный комплект одним ZIP или переслать заказчику и партнёру отдельные материалы.</p>
         <div class="downloads">
-          <a class="download" href="LiveTSM_Public_Sales_Kit_2026-10-13_r10.zip" download><strong>Публичный комплект целиком</strong><span>ZIP</span></a>
+          <a class="download" href="LiveTSM_Public_Sales_Kit_2026-11-05_r11.zip" download><strong>Публичный комплект целиком</strong><span>ZIP</span></a>
           <a class="download" href="LiveTSM_Sales_07_Boot_Modes.png" download><strong>Два режима и выбор ОС</strong><span>PNG</span></a>
-          <a class="download" href="LiveTSM_Partner_Battlecard_r08.docx" download><strong>Карточка партнёра</strong><span>DOCX</span></a>
+          <a class="download" href="LiveTSM_Partner_Battlecard_r09.docx" download><strong>Карточка партнёра</strong><span>DOCX</span></a>
           <a class="download" href="LiveTSM_Sales_01_Current.png" download><strong>Текущее предложение</strong><span>PNG</span></a>
           <a class="download" href="LiveTSM_Sales_02_Roadmap.png" download><strong>План развития</strong><span>PNG</span></a>
           <a class="download" href="LiveTSM_Sales_03_Interfaces.png" download><strong>Выбор подключения</strong><span>PNG</span></a>
@@ -189,7 +252,7 @@
   </main>
 
   <footer>
-    <div class="wrap">LiveTSM · материалы для продаж и аппаратной интеграции · 13.10.2026</div>
+    <div class="wrap">LiveTSM · материалы для продаж и аппаратной интеграции · 05.11.2026</div>
   </footer>
 </body>
 </html>
