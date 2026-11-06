@@ -17,6 +17,10 @@
     header p{font-size:clamp(18px,2.2vw,24px);max-width:900px;margin:0 0 26px;color:#e5f2f7}
     .revision{font-size:14px;color:#c3dbe8;margin-top:20px}
     .actions{display:flex;flex-wrap:wrap;gap:12px}
+    .priority-links{display:flex;align-items:center;flex-wrap:wrap;gap:8px 18px;margin-top:16px;font-size:15px;color:#d7eaf4}
+    .priority-links a{font-weight:700;color:#fff;text-decoration:underline;text-underline-offset:3px}
+    .priority-links a:hover,.priority-links a:focus-visible{color:#8ff0e3}
+    #headless:target,#regulatory:target{outline:3px solid #16a69a;outline-offset:-3px}
     .button{display:inline-block;padding:12px 18px;border-radius:9px;background:#fff;color:var(--navy);text-decoration:none;font-weight:750}
     .button.alt{background:#0aa297;color:#fff;border:1px solid #59cfc7}
     nav{position:sticky;top:0;z-index:3;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
@@ -95,6 +99,11 @@
         <a class="button alt" href="LiveTSM_M2_OEM_Integration_Guide.docx" download>Инструкция для производителя DOCX</a>
         <a class="button" href="LiveTSM_Public_Sales_Kit_2026-11-06_r12.zip" download>Скачать публичный комплект ZIP</a>
       </div>
+      <div class="priority-links" aria-label="Прямые ссылки на ответы по запросам заказчиков">
+        <span>Частые вопросы:</span>
+        <a href="#regulatory">Применимость LiveTSM: ГИС, ИСПДн, АСУ ТП, КИИ</a>
+        <a href="#headless">NGFW: почему не нужен личный токен пользователя</a>
+      </div>
       <div class="revision">Редакция r12 · 06.11.2026 · РРЦ 12 000 ₽ · корпоративная инструкция для OEM</div>
     </div>
   </header>
@@ -103,12 +112,12 @@
     <div class="wrap">
       <a href="#product">Продукт</a>
       <a href="#models">Исполнения и артикулы</a>
-      <a href="#regulatory">Требования ФСТЭК</a>
+      <a href="#regulatory">Применимость: ГИС и КИИ</a>
       <a href="#faq">Вопросы и ответы</a>
       <a href="#interface">Выбор интерфейса</a>
       <a href="#engineering">Контакты M.2</a>
       <a href="#usecases">Сценарии</a>
-      <a href="#headless">Запуск без оператора</a>
+      <a href="#headless">NGFW без токена пользователя</a>
       <a href="#materials">Материалы</a>
     </div>
   </nav>
@@ -148,7 +157,7 @@
     <section id="regulatory" aria-labelledby="regulatory-title">
       <div class="wrap">
         <div class="eyebrow">Область применения</div>
-        <h2 id="regulatory-title">Доверенная загрузка для систем с высокими требованиями к защите</h2>
+        <h2 id="regulatory-title">Применимость LiveTSM: ГИС, ИСПДн, АСУ ТП и КИИ</h2>
         <p class="lead">Aladdin LiveTSM — средство доверенной загрузки уровня платы расширения: <strong>4-й класс защиты, 4-й уровень доверия (УД4)</strong>. Профиль защиты — ИТ.СДЗ.ПР4.ПЗ.</p>
         <div class="regulatory-grid">
           <div class="card">
@@ -177,7 +186,7 @@
           </div>
         </div>
         <p class="regulatory-note">LiveTSM обеспечивает доверенную загрузку в составе системы защиты информации. Соответствие системы в целом оценивается отдельно с учётом реализованных мер защиты.</p>
-        <p class="regulatory-note"><a href="LiveTSM_Sales_Cards.html#faq-regulatory">Что ответить заказчику о классе и уровне доверия</a></p>
+        <p class="regulatory-note"><a href="LiveTSM_Sales_Cards.html#faq-regulatory">Подробное обоснование по классам систем и требованиям ФСТЭК</a></p>
       </div>
     </section>
     <section id="interface">
@@ -228,7 +237,7 @@
           </ul>
           <p><strong>Почему возможен такой запуск.</strong> Профиль ИТ.СДЗ.ПР4.ПЗ, который детализирует требования приказа ФСТЭК России № 119 для средств доверенной загрузки уровня платы расширения 4-го класса защиты, не требует идентифицировать и аутентифицировать пользователя при каждом штатном запуске.</p>
           <p class="caption">Доступ к настройкам защищён аутентификацией администратора. Применимость режима проверяют по документации конкретного исполнения и требованиям системы заказчика. <a href="https://legalacts.ru/doc/itsdzpr4pz-metodicheskii-dokument-profil-zashchity-sredstva-doverennoi/">Профиль защиты ИТ.СДЗ.ПР4.ПЗ</a>.</p>
-          <p><a href="LiveTSM_Sales_Cards.html#faq-headless">Ответы о запуске без оператора и сравнении с другими СДЗ</a></p>
+          <p><a href="LiveTSM_Sales_Cards.html#faq-headless">Подробное обоснование автоматической загрузки NGFW без личного токена</a></p>
         </article>
         <figure class="visual">
           <img src="LiveTSM_Sales_05_Platforms.png" alt="Сценарии применения LiveTSM для ноутбука, шлюза, сервера и производителя оборудования">
