@@ -20,6 +20,8 @@
 
 Плеер запускается посетителем, сохраняет пропорции 16:9 и не загружает видео автоматически. Рядом — скачивание MP4, отдельный SRT и полный текст шести глав. Отдельные субтитры не нужно включать поверх встроенных.
 
+- [Видео на главной странице Sales Kit](https://igorsvetoch.github.io/livetsm-sales-kit/#video)
+- [Открыть или скачать MP4 — 4:59, 11,4 МБ](https://igorsvetoch.github.io/livetsm-sales-kit/assets/video/livetsm-overview-v1.mp4)
 - [Видеопрезентация в Sales Kit](https://igorsvetoch.github.io/livetsm-sales-kit/LiveTSM_Sales_Cards.html#video)
 - [Видеопрезентация на промосайте](https://igorsvetoch.github.io/livetsm-site/#video)
 
