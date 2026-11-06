@@ -69,6 +69,18 @@
     .faq-item summary:focus-visible{outline:3px solid var(--teal);outline-offset:-4px}
     .faq-answer{padding:0 22px 22px}.faq-answer p{max-width:1000px}
     @media(max-width:800px){.os-brief{padding:16px}.faq-item summary{font-size:17px;padding:16px}.faq-answer{padding:0 16px 18px}}
+
+    #models{scroll-margin-top:75px;margin-top:34px;padding-top:35px;border-top:1px solid var(--line)}
+    .models-panel h2{margin:8px 0 12px}
+    .models-visual{margin:16px 0}
+    .models-visual>a{display:block}
+    .models-visual img{width:100%;height:auto}
+    .models-quick{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0}
+    .model-mini{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}
+    .model-mini h3{font-size:20px;margin:0 0 6px}
+    .model-mini p{font-size:15px;margin:5px 0}
+    .model-note{font-size:15px;color:#526b7e;margin:12px 0}
+    @media(max-width:800px){.models-quick{grid-template-columns:1fr}.models-visual{overflow:auto}.models-visual img{min-width:650px}}
   </style>
 </head>
 <body>
@@ -78,17 +90,19 @@
       <h1>Комплект для продаж и аппаратной интеграции</h1>
       <p>От задачи заказчика — к выбору исполнения, проверке электрического интерфейса и согласованию платформы с производителем оборудования.</p>
       <div class="actions">
-        <a class="button" href="LiveTSM_Sales_Cards.html">Ответы на вопросы заказчика</a>
+        <a class="button" href="#models">Подобрать исполнение</a>
+        <a class="button" href="LiveTSM_Sales_Cards.html#faq-models">Артикулы и FAQ</a>
         <a class="button alt" href="LiveTSM_M2_OEM_Integration_Guide.docx" download>Инструкция для производителя DOCX</a>
-        <a class="button" href="LiveTSM_Public_Sales_Kit_2026-11-05_r11.zip" download>Скачать публичный комплект ZIP</a>
+        <a class="button" href="LiveTSM_Public_Sales_Kit_2026-11-06_r12.zip" download>Скачать публичный комплект ZIP</a>
       </div>
-      <div class="revision">Редакция r11 · 05.11.2026 · РРЦ 12 000 ₽ · корпоративная инструкция для OEM</div>
+      <div class="revision">Редакция r12 · 06.11.2026 · РРЦ 12 000 ₽ · корпоративная инструкция для OEM</div>
     </div>
   </header>
 
   <nav aria-label="Разделы страницы">
     <div class="wrap">
       <a href="#product">Продукт</a>
+      <a href="#models">Исполнения и артикулы</a>
       <a href="#regulatory">Требования ФСТЭК</a>
       <a href="#faq">Вопросы и ответы</a>
       <a href="#interface">Выбор интерфейса</a>
@@ -103,7 +117,7 @@
     <section id="product">
       <div class="wrap">
         <h2>Что предлагаем и куда развивается LiveTSM</h2>
-        <p class="lead">Два первых листа дают продавцу короткий контекст: что доступно сейчас и какие функции входят в план развития.</p>
+        <p class="lead">Первые два листа показывают действующие возможности и план развития. Третий — помогает выбрать семейство, аппаратную платформу и артикул.</p>
         <div class="grid2">
           <figure class="visual">
             <img src="LiveTSM_Sales_01_Current.png" alt="Текущее предложение LiveTSM">
@@ -113,6 +127,21 @@
             <img src="LiveTSM_Sales_02_Roadmap.png" alt="План развития LiveTSM">
             <figcaption class="caption">План развития продукта</figcaption>
           </figure>
+        </div>
+        <div id="models" class="models-panel">
+          <div class="eyebrow">Справочник продавца · 3 семейства · 8 артикулов по ТУ</div>
+          <h2>Как выбрать исполнение LiveTSM</h2>
+          <p class="lead">Сначала определяем режим загрузки и способ установки, затем выбираем артикул. <strong>T110 и E110</strong> выпускаются в конструктиве JaCarta XL либо M.2; <strong>C110</strong> — только внешний USB-A.</p>
+          <figure class="visual models-visual">
+            <a href="LiveTSM_Sales_08_Models.svg" target="_blank" rel="noopener" aria-label="Открыть инфографику в полном размере"><img src="LiveTSM_Sales_08_Models.svg" alt="Выбор исполнения: T110 — автоматическая загрузка, внутренний XL или M.2; E110 — с предзагрузочной аутентификацией, внутренний XL или M.2; C110 — внешний USB-A XL. Восемь артикулов по ТУ"></a>
+            <figcaption class="caption">Реальные фотографии JaCarta XL и M.2 из ТУ. <a href="LiveTSM_Sales_08_Models.svg" target="_blank" rel="noopener">Открыть крупно</a> · <a href="LiveTSM_Sales_Cards.html#faq-models">Все 8 артикулов, правила выбора и ответы продавцу</a>.</figcaption>
+          </figure>
+          <div class="models-quick" aria-label="Краткий выбор семейства">
+            <article class="model-mini"><h3>T110 · автоматически</h3><p>NGFW, сервер, банкомат. Внутренний XL или M.2 A+E.</p><p><strong>TSMX-T110.01 / .02 / .03</strong></p></article>
+            <article class="model-mini"><h3>E110 · с И/А</h3><p>Настольный АРМ. Внутренний XL или M.2 A+E.</p><p><strong>TSMX-E110.01 / .02 / .03</strong></p></article>
+            <article class="model-mini"><h3>C110 · снаружи</h3><p>Ноутбук без вскрытия корпуса. USB Type-A, JaCarta XL.</p><p><strong>TSMX-C110.01 / .02</strong></p></article>
+          </div>
+          <p class="model-note"><strong>Перед заказом:</strong> обозначения и аппаратные платформы указаны по ТУ; действующую номенклатуру, комплектацию и наличие проверяем в Salesforce. M.2 A+E использует USB 2.0, а не PCIe; требуется проверка электрической совместимости.</p>
         </div>
       </div>
     </section>
@@ -226,6 +255,7 @@
     </section>
 
     <section id="faq"><div class="wrap"><h2>Вопросы и ответы</h2>
+<details class="faq-item" id="faq-sku"><summary>Чем отличаются T110, E110 и C110 и какой артикул заказывать?</summary><div class="faq-answer"><p><strong>T110</strong> — автоматическая загрузка для NGFW, серверов и специализированного оборудования; <strong>E110</strong> — внутреннее исполнение с предзагрузочной идентификацией и аутентификацией; <strong>C110</strong> — внешнее USB-A для ноутбуков.</p><p>T110 и E110 бывают в конструктиве JaCarta XL или M.2 2230 A+E; C110 — только JaCarta XL. Всего в ТУ перечислены восемь артикулов. <a href="LiveTSM_Sales_Cards.html#faq-models">Открыть полный справочник</a>.</p><p>M.2 использует USB 2.0, а не PCIe. Действующие артикулы и комплектацию уточняйте в Salesforce.</p></div></details>
 <details class="faq-item" id="faq-os-choice"><summary>Можно ли выбирать Linux или Windows без вызова администратора?</summary><div class="faq-answer"><p>Да. Администратор один раз задаёт разрешённую конфигурацию: LiveTSM выполняет проверки и передаёт управление GRUB. Пользователь выбирает нужную ОС в меню. Для каждого переключения перенастройка LiveTSM не нужна.</p><p>Обновления и изменение разрешённой конфигурации обслуживаются по регламенту. Выбирается одна ОС при запуске; это не одновременная работа нескольких систем.</p></div></details>
 <details class="faq-item" id="faq-boot-modes"><summary>Чем отличаются прямая загрузка Linux и режим совместимости?</summary><div class="faq-answer"><p><strong>Прямая загрузка Linux:</strong> LiveTSM сам запускает ядро Linux, исключая shim и GRUB из цепочки.</p><p><strong>Режим совместимости:</strong> LiveTSM запускает разрешённый GRUB, а пользователь выбирает ОС. Для Windows сохраняется Windows Boot Manager.</p><p class="caption">GRUB — GRand Unified Bootloader, загрузчик с меню выбора ОС. shim — промежуточный EFI-загрузчик; EFI — Extensible Firmware Interface, интерфейс прошивки. ОС — операционная система.</p><figure class="visual"><img src="LiveTSM_Sales_07_Boot_Modes.png" alt="Подробное сравнение двух режимов загрузки LiveTSM" loading="lazy"><figcaption class="caption">Подробности для администратора безопасности</figcaption></figure><p><a href="LiveTSM_Sales_07_Boot_Modes.png" download>Скачать схему PNG</a> · <a href="LiveTSM_Partner_Battlecard_r09.docx" download>Карточка партнёра Word</a></p></div></details>
 <details class="faq-item" id="faq-security"><summary>Какой режим выбрать администратору безопасности?</summary><div class="faq-answer"><p>Прямая загрузка Linux сокращает число доверенных компонентов. Режим совместимости сохраняет привычный выбор ОС, но делает цепочку длиннее и расширяет поверхность атаки. Администратор осознанно принимает снижение безопасности относительно сокращённого варианта ради гибкости рабочего места.</p><p>В обоих случаях единственный разрешённый старт через LiveTSM должен сохраняться. Состав контролируемых компонентов определяется выбранной политикой и версией продукта.</p></div></details>
@@ -235,7 +265,9 @@
         <h2>Материалы для скачивания</h2>
         <p class="lead">Можно скачать весь безопасный публичный комплект одним ZIP или переслать заказчику и партнёру отдельные материалы.</p>
         <div class="downloads">
-          <a class="download" href="LiveTSM_Public_Sales_Kit_2026-11-05_r11.zip" download><strong>Публичный комплект целиком</strong><span>ZIP</span></a>
+          <a class="download" href="LiveTSM_Public_Sales_Kit_2026-11-06_r12.zip" download><strong>Публичный комплект целиком</strong><span>ZIP</span></a>
+          <a class="download" href="LiveTSM_Sales_08_Models.svg" download><strong>Выбор исполнения: T110 / E110 / C110</strong><span>SVG</span></a>
+          <a class="download" href="LiveTSM_Models_and_SKUs_Source.md" download><strong>Восемь артикулов и правила выбора</strong><span>MD</span></a>
           <a class="download" href="LiveTSM_Sales_07_Boot_Modes.png" download><strong>Два режима и выбор ОС</strong><span>PNG</span></a>
           <a class="download" href="LiveTSM_Partner_Battlecard_r09.docx" download><strong>Карточка партнёра</strong><span>DOCX</span></a>
           <a class="download" href="LiveTSM_Sales_01_Current.png" download><strong>Текущее предложение</strong><span>PNG</span></a>
@@ -252,7 +284,7 @@
   </main>
 
   <footer>
-    <div class="wrap">LiveTSM · материалы для продаж и аппаратной интеграции · 05.11.2026</div>
+    <div class="wrap">LiveTSM · материалы для продаж и аппаратной интеграции · 06.11.2026 · r12</div>
   </footer>
 </body>
 </html>

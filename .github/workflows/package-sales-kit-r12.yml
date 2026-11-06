@@ -1,0 +1,53 @@
+name: Package LiveTSM Sales Kit r12
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - '00_Start.html'
+      - 'LiveTSM_Sales_Cards.html'
+      - 'LiveTSM_Models_and_SKUs_Source.md'
+      - 'LiveTSM_Sales_08_Models.svg'
+      - '.github/workflows/package-sales-kit-r12.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Validate and package public files
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import zipfile
+          root=Path(".")
+          names=["00_Start.html","LiveTSM_Boot_Modes_Source.md","LiveTSM_Competitive_Analysis.html","LiveTSM_First_Infographic_Source.md","LiveTSM_Homepage_FAQ_Source.md","LiveTSM_Laptop_Clean.mp4","LiveTSM_M2_OEM_Integration_Guide.docx","LiveTSM_Models_and_SKUs_Source.md","LiveTSM_NGFW_Clean.mp4","LiveTSM_Partner_Battlecard_r09.docx","LiveTSM_Pricing_Policy.md","LiveTSM_Sales_01_Current.png","LiveTSM_Sales_02_Roadmap.png","LiveTSM_Sales_03_Interfaces.png","LiveTSM_Sales_04_Competition.png","LiveTSM_Sales_05_Platforms.png","LiveTSM_Sales_06_M2_Connector_Map.png","LiveTSM_Sales_07_Boot_Modes.png","LiveTSM_Sales_08_Models.svg","LiveTSM_Sales_Cards.html","README.md","index.html","photos/LiveTSM_M2_USB_from_TU.png","photos/LiveTSM_USB_from_TU.png"]
+          for name in names:
+              if not (root/name).is_file():
+                  raise SystemExit("Missing public file: "+name)
+          archive=root/"LiveTSM_Public_Sales_Kit_2026-11-06_r12.zip"
+          with zipfile.ZipFile(archive,"w",zipfile.ZIP_DEFLATED,compresslevel=8) as z:
+              for name in names:
+                  z.write(root/name,arcname="LiveTSM_Public_Sales_Kit/"+name)
+          with zipfile.ZipFile(archive) as z:
+              bad=z.testzip()
+              if bad:
+                  raise SystemExit("Corrupted ZIP member: "+bad)
+              assert len(z.namelist()) == len(names)
+          print("Built",archive,archive.stat().st_size,"bytes")
+          PY
+      - name: Commit release archive
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- LiveTSM_Public_Sales_Kit_2026-11-06_r12.zip
+          if ! git diff --cached --quiet; then
+            git commit -m "Package curated LiveTSM Sales Kit r12"
+            git push origin HEAD:main
+          fi
