@@ -9,6 +9,10 @@ on:
       - 'LiveTSM_Models_and_SKUs_Source.md'
       - 'LiveTSM_Sales_08_Models.svg'
       - '.github/workflows/package-sales-kit-r12.yml'
+      - 'assets/video/**'
+      - 'VIDEO-RELEASE.md'
+      - 'VIDEO-RELEASE.json'
+      - 'README.md'
   workflow_dispatch:
 permissions:
   contents: write
@@ -26,7 +30,7 @@ jobs:
           from pathlib import Path
           import zipfile
           root=Path(".")
-          names=["00_Start.html","LiveTSM_Boot_Modes_Source.md","LiveTSM_Competitive_Analysis.html","LiveTSM_First_Infographic_Source.md","LiveTSM_Homepage_FAQ_Source.md","LiveTSM_Laptop_Clean.mp4","LiveTSM_M2_OEM_Integration_Guide.docx","LiveTSM_Models_and_SKUs_Source.md","LiveTSM_NGFW_Clean.mp4","LiveTSM_Partner_Battlecard_r09.docx","LiveTSM_Pricing_Policy.md","LiveTSM_Sales_01_Current.png","LiveTSM_Sales_02_Roadmap.png","LiveTSM_Sales_03_Interfaces.png","LiveTSM_Sales_04_Competition.png","LiveTSM_Sales_05_Platforms.png","LiveTSM_Sales_06_M2_Connector_Map.png","LiveTSM_Sales_07_Boot_Modes.png","LiveTSM_Sales_08_Models.svg","LiveTSM_Sales_Cards.html","README.md","index.html","photos/LiveTSM_M2_USB_from_TU.png","photos/LiveTSM_USB_from_TU.png"]
+          names=["00_Start.html","LiveTSM_Boot_Modes_Source.md","LiveTSM_Competitive_Analysis.html","LiveTSM_First_Infographic_Source.md","LiveTSM_Homepage_FAQ_Source.md","LiveTSM_Laptop_Clean.mp4","LiveTSM_M2_OEM_Integration_Guide.docx","LiveTSM_Models_and_SKUs_Source.md","LiveTSM_NGFW_Clean.mp4","LiveTSM_Partner_Battlecard_r09.docx","LiveTSM_Pricing_Policy.md","LiveTSM_Sales_01_Current.png","LiveTSM_Sales_02_Roadmap.png","LiveTSM_Sales_03_Interfaces.png","LiveTSM_Sales_04_Competition.png","LiveTSM_Sales_05_Platforms.png","LiveTSM_Sales_06_M2_Connector_Map.png","LiveTSM_Sales_07_Boot_Modes.png","LiveTSM_Sales_08_Models.svg","LiveTSM_Sales_Cards.html","README.md","index.html","photos/LiveTSM_M2_USB_from_TU.png","photos/LiveTSM_USB_from_TU.png","assets/video/livetsm-overview-v1.mp4","assets/video/livetsm-overview-v1.jpg","assets/video/livetsm-overview-v1.ru.srt","VIDEO-RELEASE.md","VIDEO-RELEASE.json"]
           for name in names:
               if not (root/name).is_file():
                   raise SystemExit("Missing public file: "+name)

@@ -1,0 +1,68 @@
+{
+  "release": "r12+video-v1",
+  "date": "2026-11-06",
+  "title": "LiveTSM за 5 минут",
+  "purpose": "Вводное знакомство с LiveTSM для сотрудников, партнёров и заказчиков",
+  "duration_seconds": 299.37,
+  "duration_display": "4:59",
+  "video": {
+    "path": "assets/video/livetsm-overview-v1.mp4",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "codec": "H.264/AAC",
+    "sha256": "e831f12597ca89e174d72b8e1eefd06a58f7854bd3fd63cec5df2ce967335cbf"
+  },
+  "poster": "assets/video/livetsm-overview-v1.jpg",
+  "subtitles": {
+    "burned_in": true,
+    "language": "ru",
+    "srt": "assets/video/livetsm-overview-v1.ru.srt",
+    "automatic_extra_track": false
+  },
+  "pages": [
+    "index.html",
+    "00_Start.html",
+    "LiveTSM_Sales_Cards.html"
+  ],
+  "anchor": "video",
+  "placement": "Beginning of main on home pages; after introductory paragraphs on seller cards",
+  "player": {
+    "native_controls": true,
+    "playsinline": true,
+    "preload": "none",
+    "autoplay": false,
+    "aspect_ratio": "16/9"
+  },
+  "transcript": {
+    "native_details": true,
+    "chapter_count": 6,
+    "complete_written_script": true
+  },
+  "cross_links": {
+    "promo": "https://igorsvetoch.github.io/livetsm-site/#video",
+    "sales_kit": "https://igorsvetoch.github.io/livetsm-sales-kit/LiveTSM_Sales_Cards.html#video"
+  },
+  "constraints": [
+    "Existing product text and images preserved",
+    "No new certification claims",
+    "Existing short videos preserved",
+    "No new form or pilot CTA",
+    "Only approved finished public media included"
+  ],
+  "packaging": {
+    "archive": "LiveTSM_Public_Sales_Kit_2026-11-06_r12.zip",
+    "allowlist_only": true,
+    "new_files": [
+      "assets/video/livetsm-overview-v1.mp4",
+      "assets/video/livetsm-overview-v1.jpg",
+      "assets/video/livetsm-overview-v1.ru.srt",
+      "VIDEO-RELEASE.md",
+      "VIDEO-RELEASE.json"
+    ],
+    "old_archives_preserved": [
+      "r10",
+      "r11"
+    ]
+  }
+}
