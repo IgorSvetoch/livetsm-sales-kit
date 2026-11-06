@@ -86,6 +86,29 @@
     .model-note{font-size:15px;color:#526b7e;margin:12px 0}
     @media(max-width:800px){.models-quick{grid-template-columns:1fr}.models-visual{overflow:auto}.models-visual img{min-width:650px}}
   </style>
+
+  <style id="livetsm-video-styles">
+    .livetsm-video{scroll-margin-top:76px}
+    .livetsm-video__eyebrow{margin:0 0 9px;color:#007a79;font-size:14px;font-weight:750;letter-spacing:.045em;text-transform:uppercase}
+    .livetsm-video h2{margin:0 0 12px;color:#0b2a5a;font-size:clamp(27px,3.4vw,40px);line-height:1.2}
+    .livetsm-video__lead{max-width:900px;margin:0 0 24px;color:#4f687d;font-size:20px;line-height:1.55}
+    .livetsm-video__frame{margin:0;background:#091b2b;border:1px solid #c9dce7;border-radius:14px;overflow:hidden;box-shadow:0 14px 38px rgba(26,66,96,.08)}
+    .livetsm-video__player{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:#091b2b;border-radius:0}
+    .livetsm-video__caption{margin:13px 0 0;color:#60758a;font-size:15px;line-height:1.5}
+    .livetsm-video__links{display:flex;flex-wrap:wrap;gap:10px 24px;margin:18px 0 22px}
+    .livetsm-video__links a,.livetsm-video-jump a{display:inline-flex;align-items:center;min-height:44px;color:#006c73;font-weight:650;text-underline-offset:4px}
+    .livetsm-video__transcript{border:1px solid #c9dce7;border-radius:12px;background:#fff;overflow:hidden}
+    .livetsm-video__transcript summary{padding:17px 20px;cursor:pointer;color:#0b2a5a;font-size:18px;font-weight:700;min-height:48px}
+    .livetsm-video__transcript summary:hover{background:#f2f7fa}
+    .livetsm-video__text{padding:0 22px 22px;font-size:17px;line-height:1.7;color:#18324b}
+    .livetsm-video__text h3{margin:24px 0 8px;font-size:20px;color:#0b2a5a;line-height:1.3}
+    .livetsm-video__text p{margin:0 0 15px}
+    .livetsm-video :is(a,summary):focus-visible,.livetsm-video-jump a:focus-visible{outline:3px solid #008f86;outline-offset:4px}
+    .livetsm-video--cards{padding:26px 0 10px;margin-bottom:32px}
+    @media(max-width:600px){.livetsm-video__lead{font-size:18px}.livetsm-video__links{gap:8px 18px}.livetsm-video__text{padding:0 16px 18px}.livetsm-video__transcript summary{padding:16px}.livetsm-video__frame{border-radius:10px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    @media print{.livetsm-video__player{display:none}.livetsm-video__frame{box-shadow:none;border:none}.livetsm-video__links{display:block}}
+  </style>
 </head>
 <body>
   <header>
@@ -94,6 +117,7 @@
       <h1>Комплект для продаж и аппаратной интеграции</h1>
       <p>От задачи заказчика — к выбору исполнения, проверке электрического интерфейса и согласованию платформы с производителем оборудования.</p>
       <div class="actions">
+        <a class="button" href="#video">Смотреть видео · 5 минут</a>
         <a class="button" href="#models">Подобрать исполнение</a>
         <a class="button" href="LiveTSM_Sales_Cards.html#faq-models">Артикулы и FAQ</a>
         <a class="button alt" href="LiveTSM_M2_OEM_Integration_Guide.docx" download>Инструкция для производителя DOCX</a>
@@ -123,6 +147,45 @@
   </nav>
 
   <main>
+    <!-- Approved introductory video v1 -->
+    <section id="video" class="livetsm-video" aria-labelledby="livetsm-video-title">
+      <div class="wrap">
+        <p class="livetsm-video__eyebrow">Знакомство с продуктом · 4:59</p>
+        <h2 id="livetsm-video-title">LiveTSM за 5 минут</h2>
+        <p class="livetsm-video__lead">Вводная видеопрезентация: что делает LiveTSM, для каких задач подходит и что важно при внедрении и обслуживании.</p>
+        <figure class="livetsm-video__frame">
+          <video class="livetsm-video__player" controls playsinline preload="none" width="1920" height="1080" poster="assets/video/livetsm-overview-v1.jpg" aria-label="Видеопрезентация LiveTSM за 5 минут" aria-describedby="livetsm-video-caption">
+            <source src="assets/video/livetsm-overview-v1.mp4" type="video/mp4">
+            Ваш браузер не воспроизводит это видео. <a href="assets/video/livetsm-overview-v1.mp4">Скачать MP4</a> или прочитать полный текст ниже.
+          </video>
+        </figure>
+        <p id="livetsm-video-caption" class="livetsm-video__caption">Озвучка на русском языке. Полные субтитры включены в изображение — видео можно смотреть без звука.</p>
+        <div class="livetsm-video__links">
+          <a href="assets/video/livetsm-overview-v1.mp4" download>Скачать видео · MP4, 11 МБ</a>
+          <a href="assets/video/livetsm-overview-v1.ru.srt" download>Субтитры · SRT</a>
+          <a href="https://igorsvetoch.github.io/livetsm-site/#video">Видео на промосайте LiveTSM</a>
+        </div>
+        <details class="livetsm-video__transcript">
+          <summary>Полный текст видеопрезентации</summary>
+          <div class="livetsm-video__text">
+          <h3>01. Что, для кого и о чём</h3>
+          <p>Здравствуйте. Сегодня поговорим о LiveTSM — аппаратном модуле доверенной загрузки. Этот рассказ адресован тем, кто выбирает средства защиты, внедряет их и затем отвечает за работу оборудования. За несколько минут мы посмотрим, как устроен LiveTSM, что происходит при включении компьютера и чем отличаются сценарии для рабочего места, ноутбука и автономного устройства. Разберём и практические вопросы: нужно ли менять BIOS, можно ли запустить систему в обход проверок и что необходимо учесть перед установкой. Начнём с самого устройства.</p>
+          <h3>02. Знакомство с модулем</h3>
+          <p>Перед вами реальные модули LiveTSM. В зависимости от исполнения это устройство с подключением USB Type-A или плата M.2. Внешний вариант удобен для ноутбука: его можно подключить без вскрытия корпуса. Для установки внутри оборудования подбирают подходящее исполнение и подключение. Код модуля не встраивается в образ BIOS. Штатный код прошивки сохраняется. При этом администратор настраивает параметры загрузки, доверенные ключи и защиту этих настроек. То есть установка всё равно требует подготовки платформы.</p>
+          <h3>03. Что происходит при загрузке</h3>
+          <p>Теперь проследим обычное включение компьютера. Настроенная политика Secure Boot допускает запуск LiveTSM и закрывает альтернативные пути в обход него. Просто поставить модуль первым в списке загрузки недостаточно. Сам модуль выполняет предусмотренные политикой проверки, в том числе контроль целостности заданных компонентов. Только после успешного результата управление передаётся разрешённой операционной системе. Если требования политики нарушены, защищённая штатная загрузка блокируется. Администратор выясняет причину и действует по принятому регламенту. Это важно заранее показать эксплуатационной команде: какой результат считается нормальным, а какой требует вмешательства. При внедрении отдельно проверяют попытку загрузки с другого носителя и запуск без обязательного модуля. В правильно настроенной конфигурации такие действия не должны открывать обход контроля.</p>
+          <h3>04. Три сценария применения</h3>
+          <p>Один и тот же принцип применяется в разных условиях. На стационарном рабочем месте выбирают исполнение и режим с идентификацией и аутентификацией пользователя до запуска системы. Для мобильного рабочего места важен внешний форм-фактор и подключение без разборки ноутбука. А у автономного оборудования другая задача: после перезапуска рядом может не оказаться человека. Например, сетевой шлюз или сервер должен пройти предусмотренные проверки и продолжить работу. На поддерживаемой платформе для этого заранее настраивается автоматическая доверенная загрузка. Личный токен пользователя при штатном старте не нужен. Сам модуль остаётся подключённым. Для входа в настройки администратор проходит аутентификацию. Поэтому сначала определяют сценарий эксплуатации, а затем выбирают конкретное исполнение.</p>
+          <h3>05. Настройка и обслуживание</h3>
+          <p>Теперь о повседневной работе. Для настройки предусмотрены графический и полноценный консольный интерфейсы. На оборудовании без видеокарты можно использовать предзагрузочную консоль, если платформа поддерживает её перенаправление. Возможности управления и способ подключения модуля проверяют для выбранной конфигурации. Обновление BIOS не требует удаления кода LiveTSM из прошивки: он туда не встроен. Но после обновления необходимо проверить сохранность доверенных ключей, параметров загрузки и защиты настроек. Если они изменились, утверждённую конфигурацию восстанавливают и проверяют до возвращения оборудования в эксплуатацию. То же внимание требуется при согласованных изменениях операционной системы и её загрузочных компонентов.</p>
+          <h3>06. Что проверить перед внедрением</h3>
+          <p>Что нужно для начала? Определить защищаемую систему и режим запуска. Нужна поддерживаемая платформа с 64-разрядной UEFI, настройкой собственных доверенных ключей и загрузкой модуля через USB. Для платы M.2 одного совпадения разъёма недостаточно: это исполнение использует USB 2.0. Проверяют питание, подключение и доступность устройства в UEFI. Затем согласовать политику проверок и порядок обслуживания. LiveTSM решает конкретную задачу: организует разрешённый путь загрузки и выполняет контроль перед запуском системы. Он не подменяет остальные средства защиты работающей инфраструктуры. Подробные ответы и материалы для выбора конфигурации собраны в Sales Kit. Контакты Аладдина и ссылка на комплект — на экране.</p>
+          </div>
+        </details>
+      </div>
+    </section>
+    <!-- End approved introductory video -->
+
     <section id="product">
       <div class="wrap">
         <h2>Что предлагаем и куда развивается LiveTSM</h2>
