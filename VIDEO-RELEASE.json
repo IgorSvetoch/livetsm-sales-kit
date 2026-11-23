@@ -1,24 +1,27 @@
 {
-  "release": "r12+video-v1",
-  "date": "2026-11-06",
+  "release": "r12+video-v6",
+  "date": "2026-11-23",
   "title": "LiveTSM за 5 минут",
   "purpose": "Вводное знакомство с LiveTSM для сотрудников, партнёров и заказчиков",
-  "duration_seconds": 299.37,
-  "duration_display": "4:59",
+  "duration_seconds": 297.0,
+  "duration_display": "4:57",
   "video": {
     "path": "assets/video/livetsm-overview-v1.mp4",
     "width": 1920,
     "height": 1080,
     "fps": 30,
     "codec": "H.264/AAC",
-    "sha256": "e831f12597ca89e174d72b8e1eefd06a58f7854bd3fd63cec5df2ce967335cbf"
+    "sha256": "dbfc47aca3506fc04cd7703a64b4fdbbf662e345e0de26554ed2d47d0074390f",
+    "size_bytes": 11344923,
+    "revision": "v6"
   },
   "poster": "assets/video/livetsm-overview-v1.jpg",
   "subtitles": {
     "burned_in": true,
     "language": "ru",
     "srt": "assets/video/livetsm-overview-v1.ru.srt",
-    "automatic_extra_track": false
+    "automatic_extra_track": false,
+    "sha256": "0f433f6a5e4e1ff87f2cecb3bdf8d2eea14d22863d4bac5e54b75260e09de759"
   },
   "pages": [
     "index.html",
@@ -40,8 +43,8 @@
     "complete_written_script": true
   },
   "cross_links": {
-    "promo": "https://igorsvetoch.github.io/livetsm-site/#video",
-    "sales_kit": "https://igorsvetoch.github.io/livetsm-sales-kit/LiveTSM_Sales_Cards.html#video"
+    "promo": "https://igorsvetoch.github.io/livetsm-site/?v=video-v6-20261123#video",
+    "sales_kit": "https://igorsvetoch.github.io/livetsm-sales-kit/LiveTSM_Sales_Cards.html?v=video-v6-20261123#video"
   },
   "constraints": [
     "Existing product text and images preserved",
@@ -64,5 +67,6 @@
       "r10",
       "r11"
     ]
-  }
+  },
+  "cache_key": "video-v6-20261123"
 }
