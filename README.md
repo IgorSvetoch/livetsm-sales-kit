@@ -14,15 +14,17 @@
 
 РРЦ базового модуля **12 000 ₽**; остальные коммерческие условия — в КП. Документы DOCX и первые семь визуальных листов сохранены из r11 без изменений.
 
-## Дополнение video-v1 — 06.11.2026
+## Дополнение video-v6 — 23.11.2026
 
-Для первого знакомства с продуктом добавлена полная видеопрезентация **«LiveTSM за 5 минут»**: 4:59, Full HD, русская озвучка и встроенные субтитры. Она доступна в начале `index.html`, `00_Start.html` и `LiveTSM_Sales_Cards.html`, якорь `#video`. На первом экране — ссылка «Смотреть видео · 5 минут».
+Для первого знакомства с продуктом размещена обновлённая видеопрезентация **«LiveTSM за 5 минут»**: 4:57, Full HD, русская озвучка и встроенные субтитры. Она доступна в начале `index.html`, `00_Start.html` и `LiveTSM_Sales_Cards.html`, якорь `#video`. На первом экране — ссылка «Смотреть видео · 5 минут».
+
+Обновлены произношение и стыки озвучки, синхронизированы субтитры. Содержание шести глав сохранено.
 
 Плеер запускается посетителем, сохраняет пропорции 16:9 и не загружает видео автоматически. Рядом — скачивание MP4, отдельный SRT и полный текст шести глав. Отдельные субтитры не нужно включать поверх встроенных.
 
-- [Видео на главной странице Sales Kit](https://igorsvetoch.github.io/livetsm-sales-kit/#video)
-- [Открыть или скачать MP4 — 4:59, 11,4 МБ](https://igorsvetoch.github.io/livetsm-sales-kit/assets/video/livetsm-overview-v1.mp4)
-- [Видеопрезентация в Sales Kit](https://igorsvetoch.github.io/livetsm-sales-kit/LiveTSM_Sales_Cards.html#video)
-- [Видеопрезентация на промосайте](https://igorsvetoch.github.io/livetsm-site/#video)
+- [Видео на главной странице Sales Kit](https://igorsvetoch.github.io/livetsm-sales-kit/?v=video-v6-20261123#video)
+- [Открыть или скачать MP4 — 4:57, 11,3 МБ](https://igorsvetoch.github.io/livetsm-sales-kit/assets/video/livetsm-overview-v1.mp4?v=video-v6-20261123)
+- [Видеопрезентация в Sales Kit](https://igorsvetoch.github.io/livetsm-sales-kit/LiveTSM_Sales_Cards.html?v=video-v6-20261123#video)
+- [Видеопрезентация на промосайте](https://igorsvetoch.github.io/livetsm-site/?v=video-v6-20261123#video)
 
 Требования к дополнению: `VIDEO-RELEASE.md` и `VIDEO-RELEASE.json`. Редакция основного комплекта остаётся r12; существующие материалы, старые видеосценарии и архивы r10/r11 сохранены. Публичный ZIP r12 собирается из явного списка разрешённых файлов, дополненного готовым роликом, обложкой, SRT и описанием выпуска.
